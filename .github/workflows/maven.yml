@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 11
+    - name: Set up JDK 11²
       uses: actions/setup-java@v2
       with:
         java-version: '11'
@@ -24,3 +24,8 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file TP1/pom.xml
+      
+
+    - uses: codecov/codecov-action@v2
+      with:
+        token: '344ab0d5-9e37-4bc1-a79c-aaa170094434'
