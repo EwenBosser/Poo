@@ -24,8 +24,6 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file TP1/pom.xml
-      
-
     - uses: codecov/codecov-action@v2
       with:
         token: '344ab0d5-9e37-4bc1-a79c-aaa170094434'
